@@ -6,7 +6,105 @@
 <title>Abdul Wahab | Portfolio</title>
 
 <style>
-/* Animation styles */
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Sections ===== */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Skills ===== */
+.skills span {
+  display: inline-block;
+  background: #e5e7eb;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111827;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* ===== Animations ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -17,26 +115,10 @@
   opacity: 1;
   transform: translateY(0);
 }
-
 </style>
 </head>
 
 <body>
-<script>
-  const sections = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
 
 <header>
   <h1>Abdul Wahab</h1>
@@ -46,9 +128,9 @@
 <section class="fade-in">
   <h2>About Me</h2>
   <p>
-    I am a motivated and detail-oriented professional with experience in operations,
-    customer service, and digital marketing. I am passionate about learning, improving
-    processes, and delivering high-quality results in every role I take.
+    I am a motivated and detail-oriented professional with experience in customer service,
+    operations, and digital marketing. I am currently pursuing a Master's degree in Digital
+    Marketing and Analytics and enjoy learning new technologies and skills.
   </p>
 </section>
 
@@ -57,19 +139,19 @@
 
   <div class="card">
     <strong>Restaurant Worker – Fafa’s (Finland)</strong>
-    <p>Handled customer service, inventory management, and fast-paced operations.</p>
+    <p>Managed customer service, inventory, and daily operations in a fast-paced environment.</p>
   </div>
 
   <div class="card">
     <strong>Cleaner – IHP (Finland)</strong>
-    <p>Maintained hygiene standards and worked independently with attention to detail.</p>
+    <p>Maintained hygiene standards with strong attention to detail.</p>
   </div>
 
   <div class="card">
     <strong>Assistant Group Shop Manager – Borjan-Rafum Group</strong>
-    <p>Managed inventory, cash flow, and daily operations across multiple locations.</p>
+    <p>Handled inventory control, cash audits, and operational improvements.</p>
   </div>
-<section class="fade-in">
+</section>
 
 <section class="fade-in">
   <h2>Skills</h2>
@@ -83,25 +165,45 @@
     <span>Teamwork</span>
     <span>Time Management</span>
   </div>
-<section class="fade-in">
+</section>
 
 <section class="fade-in">
   <h2>Projects</h2>
   <div class="card">
     <strong>Personal Portfolio Website</strong>
-    <p>Designed and developed a responsive personal website using HTML & CSS.</p>
+    <p>
+      Built a responsive portfolio website using HTML, CSS, and GitHub Pages
+      for free hosting and learning purposes.
+    </p>
   </div>
-<section class="fade-in">
+</section>
 
-<section class="buttons">
+<section class="fade-in buttons">
   <a class="button" href="Abdul-Wahab-CV.pdf" download>Download CV</a>
   <a class="button" href="https://www.linkedin.com/in/abdulwahab96/" target="_blank">LinkedIn</a>
   <a class="button" href="mailto:abdulwahab_1096@yahoo.com">Email Me</a>
 </section>
 
 <footer>
-  © 2025 Abdul Wahab | All Rights Reserved
+  © 2025 Abdul Wahab | Portfolio
 </footer>
+
+<script>
+/* ===== Scroll Animation Script ===== */
+const sections = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 
 </body>
 </html>
